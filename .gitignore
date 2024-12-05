@@ -129,7 +129,6 @@ docs/presentations/
 test.py
 
 
-docs
 example_data
 logs
 vuegen
@@ -138,3 +137,4 @@ report_config_micw2graph.yaml
 report_metadata.yaml
 setup.py
 pyproject.toml
+report_DemProt.yaml
