@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 1000px;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#6d77f0", "id": "AFAM", "label": "AFAM", "shape": "dot"}, {"color": "#6d77f0", "id": "F13B", "label": "F13B", "shape": "dot"}, {"color": "#6d77f0", "id": "CNDP1", "label": "CNDP1", "shape": "dot"}, {"color": "#6d77f0", "id": "ALCAM", "label": "ALCAM", "shape": "dot"}, {"color": "#6d77f0", "id": "F13A", "label": "F13A", "shape": "dot"}, {"color": "#6d77f0", "id": "IBP2", "label": "IBP2", "shape": "dot"}, {"color": "#863899", "id": "extracellular exosome [GO:0070062]", "label": "extracellular exosome [GO:0070062]", "shape": "dot"}, {"color": "#863899", "id": "extracellular space [GO:0005615]", "label": "extracellular space [GO:0005615]", "shape": "dot"}, {"color": "#863899", "id": "cytoplasm [GO:0005737]", "label": "cytoplasm [GO:0005737]", "shape": "dot"}, {"color": "#863899", "id": "extracellular region [GO:0005576]", "label": "extracellular region [GO:0005576]", "shape": "dot"}, {"color": "#863899", "id": "blood microparticle [GO:0072562]", "label": "blood microparticle [GO:0072562]", "shape": "dot"}, {"color": "#863899", "id": "transferase complex [GO:1990234]", "label": "transferase complex [GO:1990234]", "shape": "dot"}, {"color": "#863899", "id": "cytosol [GO:0005829]", "label": "cytosol [GO:0005829]", "shape": "dot"}, {"color": "#863899", "id": "axon [GO:0030424]", "label": "axon [GO:0030424]", "shape": "dot"}, {"color": "#863899", "id": "focal adhesion [GO:0005925]", "label": "focal adhesion [GO:0005925]", "shape": "dot"}, {"color": "#863899", "id": "neuronal cell body [GO:0043025]", "label": "neuronal cell body [GO:0043025]", "shape": "dot"}, {"color": "#863899", "id": "plasma membrane [GO:0005886]", "label": "plasma membrane [GO:0005886]", "shape": "dot"}, {"color": "#863899", "id": "external side of plasma membrane [GO:0009897]", "label": "external side of plasma membrane [GO:0009897]", "shape": "dot"}, {"color": "#863899", "id": "dendrite [GO:0030425]", "label": "dendrite [GO:0030425]", "shape": "dot"}, {"color": "#863899", "id": "immunological synapse [GO:0001772]", "label": "immunological synapse [GO:0001772]", "shape": "dot"}, {"color": "#863899", "id": "collagen-containing extracellular matrix [GO:0062023]", "label": "collagen-containing extracellular matrix [GO:0062023]", "shape": "dot"}, {"color": "#863899", "id": "platelet alpha granule lumen [GO:0031093]", "label": "platelet alpha granule lumen [GO:0031093]", "shape": "dot"}, {"color": "#863899", "id": "apical plasma membrane [GO:0016324]", "label": "apical plasma membrane [GO:0016324]", "shape": "dot"}]);
+                  edges = new vis.DataSet([{"color": "#999999", "from": "AFAM", "to": "extracellular exosome [GO:0070062]", "value": 1}, {"color": "#999999", "from": "AFAM", "to": "extracellular space [GO:0005615]", "value": 1}, {"color": "#999999", "from": "AFAM", "to": "cytoplasm [GO:0005737]", "value": 1}, {"color": "#999999", "from": "AFAM", "to": "extracellular region [GO:0005576]", "value": 1}, {"color": "#999999", "from": "AFAM", "to": "blood microparticle [GO:0072562]", "value": 1}, {"color": "#999999", "from": "F13B", "to": "extracellular space [GO:0005615]", "value": 1}, {"color": "#999999", "from": "F13B", "to": "transferase complex [GO:1990234]", "value": 1}, {"color": "#999999", "from": "F13B", "to": "extracellular region [GO:0005576]", "value": 1}, {"color": "#999999", "from": "CNDP1", "to": "cytosol [GO:0005829]", "value": 1}, {"color": "#999999", "from": "CNDP1", "to": "extracellular region [GO:0005576]", "value": 1}, {"color": "#999999", "from": "ALCAM", "to": "extracellular exosome [GO:0070062]", "value": 1}, {"color": "#999999", "from": "ALCAM", "to": "axon [GO:0030424]", "value": 1}, {"color": "#999999", "from": "ALCAM", "to": "focal adhesion [GO:0005925]", "value": 1}, {"color": "#999999", "from": "ALCAM", "to": "neuronal cell body [GO:0043025]", "value": 1}, {"color": "#999999", "from": "ALCAM", "to": "plasma membrane [GO:0005886]", "value": 1}, {"color": "#999999", "from": "ALCAM", "to": "external side of plasma membrane [GO:0009897]", "value": 1}, {"color": "#999999", "from": "ALCAM", "to": "dendrite [GO:0030425]", "value": 1}, {"color": "#999999", "from": "ALCAM", "to": "immunological synapse [GO:0001772]", "value": 1}, {"color": "#999999", "from": "F13A", "to": "extracellular space [GO:0005615]", "value": 1}, {"color": "#999999", "from": "F13A", "to": "transferase complex [GO:1990234]", "value": 1}, {"color": "#999999", "from": "F13A", "to": "extracellular region [GO:0005576]", "value": 1}, {"color": "#999999", "from": "F13A", "to": "collagen-containing extracellular matrix [GO:0062023]", "value": 1}, {"color": "#999999", "from": "F13A", "to": "platelet alpha granule lumen [GO:0031093]", "value": 1}, {"color": "#999999", "from": "F13A", "to": "blood microparticle [GO:0072562]", "value": 1}, {"color": "#999999", "from": "IBP2", "to": "extracellular exosome [GO:0070062]", "value": 1}, {"color": "#999999", "from": "IBP2", "to": "apical plasma membrane [GO:0016324]", "value": 1}, {"color": "#999999", "from": "IBP2", "to": "extracellular space [GO:0005615]", "value": 1}, {"color": "#999999", "from": "IBP2", "to": "extracellular region [GO:0005576]", "value": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,176 @@
+{
+    "nodes": [
+        {
+            "color": "#6d77f0",
+            "id": "AFAM",
+            "label": "AFAM",
+            "shape": "dot"
+        },
+        {
+            "color": "#6d77f0",
+            "id": "CNDP1",
+            "label": "CNDP1",
+            "shape": "dot"
+        },
+        {
+            "color": "#6d77f0",
+            "id": "ALCAM",
+            "label": "ALCAM",
+            "shape": "dot"
+        },
+        {
+            "color": "#6d77f0",
+            "id": "F13A",
+            "label": "F13A",
+            "shape": "dot"
+        },
+        {
+            "color": "#6d77f0",
+            "id": "IBP2",
+            "label": "IBP2",
+            "shape": "dot"
+        },
+        {
+            "color": "#fc915c",
+            "id": "vitamin E binding [GO:0008431]",
+            "label": "vitamin E binding [GO:0008431]",
+            "shape": "dot"
+        },
+        {
+            "color": "#fc915c",
+            "id": "carboxypeptidase activity [GO:0004180]",
+            "label": "carboxypeptidase activity [GO:0004180]",
+            "shape": "dot"
+        },
+        {
+            "color": "#fc915c",
+            "id": "dipeptidase activity [GO:0016805]",
+            "label": "dipeptidase activity [GO:0016805]",
+            "shape": "dot"
+        },
+        {
+            "color": "#fc915c",
+            "id": "metallodipeptidase activity [GO:0070573]",
+            "label": "metallodipeptidase activity [GO:0070573]",
+            "shape": "dot"
+        },
+        {
+            "color": "#fc915c",
+            "id": "metal ion binding [GO:0046872]",
+            "label": "metal ion binding [GO:0046872]",
+            "shape": "dot"
+        },
+        {
+            "color": "#fc915c",
+            "id": "identical protein binding [GO:0042802]",
+            "label": "identical protein binding [GO:0042802]",
+            "shape": "dot"
+        },
+        {
+            "color": "#fc915c",
+            "id": "signaling receptor binding [GO:0005102]",
+            "label": "signaling receptor binding [GO:0005102]",
+            "shape": "dot"
+        },
+        {
+            "color": "#fc915c",
+            "id": "protein-glutamine gamma-glutamyltransferase activity [GO:0003810]",
+            "label": "protein-glutamine gamma-glutamyltransferase activity [GO:0003810]",
+            "shape": "dot"
+        },
+        {
+            "color": "#fc915c",
+            "id": "insulin-like growth factor II binding [GO:0031995]",
+            "label": "insulin-like growth factor II binding [GO:0031995]",
+            "shape": "dot"
+        },
+        {
+            "color": "#fc915c",
+            "id": "insulin-like growth factor I binding [GO:0031994]",
+            "label": "insulin-like growth factor I binding [GO:0031994]",
+            "shape": "dot"
+        },
+        {
+            "color": "#6d77f0",
+            "x": 100,
+            "y": 100,
+            "id": "F13B",
+            "label": "F13B",
+            "shape": "dot"
+        }
+    ],
+    "edges": [
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "AFAM",
+            "to": "vitamin E binding [GO:0008431]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "CNDP1",
+            "to": "carboxypeptidase activity [GO:0004180]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "CNDP1",
+            "to": "dipeptidase activity [GO:0016805]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "CNDP1",
+            "to": "metallodipeptidase activity [GO:0070573]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "CNDP1",
+            "to": "metal ion binding [GO:0046872]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "ALCAM",
+            "to": "identical protein binding [GO:0042802]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "ALCAM",
+            "to": "signaling receptor binding [GO:0005102]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "F13A",
+            "to": "protein-glutamine gamma-glutamyltransferase activity [GO:0003810]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "F13A",
+            "to": "metal ion binding [GO:0046872]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "IBP2",
+            "to": "insulin-like growth factor II binding [GO:0031995]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "IBP2",
+            "to": "insulin-like growth factor I binding [GO:0031994]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "IBP2",
+            "to": "signaling receptor binding [GO:0005102]"
+        }
+    ]
+}

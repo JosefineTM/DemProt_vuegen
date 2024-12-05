@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 1000px;
+                 height: 1000px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#6d77f0", "id": "AFAM", "label": "AFAM", "shape": "dot"}, {"color": "#6d77f0", "id": "F13B", "label": "F13B", "shape": "dot"}, {"color": "#6d77f0", "id": "CNDP1", "label": "CNDP1", "shape": "dot"}, {"color": "#6d77f0", "id": "ALCAM", "label": "ALCAM", "shape": "dot"}, {"color": "#6d77f0", "id": "F13A", "label": "F13A", "shape": "dot"}, {"color": "#6d77f0", "id": "IBP2", "label": "IBP2", "shape": "dot"}, {"color": "#329f5d", "id": "protein transport within extracellular region [GO:0071693]", "label": "protein transport within extracellular region [GO:0071693]", "shape": "dot"}, {"color": "#329f5d", "id": "vitamin transport [GO:0051180]", "label": "vitamin transport [GO:0051180]", "shape": "dot"}, {"color": "#329f5d", "id": "protein stabilization [GO:0050821]", "label": "protein stabilization [GO:0050821]", "shape": "dot"}, {"color": "#329f5d", "id": "blood coagulation [GO:0007596]", "label": "blood coagulation [GO:0007596]", "shape": "dot"}, {"color": "#329f5d", "id": "blood coagulation, fibrin clot formation [GO:0072378]", "label": "blood coagulation, fibrin clot formation [GO:0072378]", "shape": "dot"}, {"color": "#329f5d", "id": "regulation of protein metabolic process [GO:0051246]", "label": "regulation of protein metabolic process [GO:0051246]", "shape": "dot"}, {"color": "#329f5d", "id": "proteolysis [GO:0006508]", "label": "proteolysis [GO:0006508]", "shape": "dot"}, {"color": "#329f5d", "id": "axon extension involved in axon guidance [GO:0048846]", "label": "axon extension involved in axon guidance [GO:0048846]", "shape": "dot"}, {"color": "#329f5d", "id": "retinal ganglion cell axon guidance [GO:0031290]", "label": "retinal ganglion cell axon guidance [GO:0031290]", "shape": "dot"}, {"color": "#329f5d", "id": "neuron projection extension [GO:1990138]", "label": "neuron projection extension [GO:1990138]", "shape": "dot"}, {"color": "#329f5d", "id": "cell adhesion [GO:0007155]", "label": "cell adhesion [GO:0007155]", "shape": "dot"}, {"color": "#329f5d", "id": "motor neuron axon guidance [GO:0008045]", "label": "motor neuron axon guidance [GO:0008045]", "shape": "dot"}, {"color": "#329f5d", "id": "signal transduction [GO:0007165]", "label": "signal transduction [GO:0007165]", "shape": "dot"}, {"color": "#329f5d", "id": "adaptive immune response [GO:0002250]", "label": "adaptive immune response [GO:0002250]", "shape": "dot"}, {"color": "#329f5d", "id": "heterophilic cell-cell adhesion via plasma membrane cell adhesion molecules [GO:0007157]", "label": "heterophilic cell-cell adhesion via plasma membrane cell adhesion molecules [GO:0007157]", "shape": "dot"}, {"color": "#329f5d", "id": "peptide cross-linking [GO:0018149]", "label": "peptide cross-linking [GO:0018149]", "shape": "dot"}, {"color": "#329f5d", "id": "response to mechanical stimulus [GO:0009612]", "label": "response to mechanical stimulus [GO:0009612]", "shape": "dot"}, {"color": "#329f5d", "id": "female pregnancy [GO:0007565]", "label": "female pregnancy [GO:0007565]", "shape": "dot"}, {"color": "#329f5d", "id": "cellular response to hormone stimulus [GO:0032870]", "label": "cellular response to hormone stimulus [GO:0032870]", "shape": "dot"}, {"color": "#329f5d", "id": "response to estrogen [GO:0043627]", "label": "response to estrogen [GO:0043627]", "shape": "dot"}, {"color": "#329f5d", "id": "response to nutrient [GO:0007584]", "label": "response to nutrient [GO:0007584]", "shape": "dot"}, {"color": "#329f5d", "id": "negative regulation of canonical Wnt signaling pathway [GO:0090090]", "label": "negative regulation of canonical Wnt signaling pathway [GO:0090090]", "shape": "dot"}, {"color": "#329f5d", "id": "regulation of insulin-like growth factor receptor signaling pathway [GO:0043567]", "label": "regulation of insulin-like growth factor receptor signaling pathway [GO:0043567]", "shape": "dot"}, {"color": "#329f5d", "id": "response to retinoic acid [GO:0032526]", "label": "response to retinoic acid [GO:0032526]", "shape": "dot"}, {"color": "#329f5d", "id": "response to estradiol [GO:0032355]", "label": "response to estradiol [GO:0032355]", "shape": "dot"}, {"color": "#329f5d", "id": "response to xenobiotic stimulus [GO:0009410]", "label": "response to xenobiotic stimulus [GO:0009410]", "shape": "dot"}, {"color": "#329f5d", "id": "response to glucocorticoid [GO:0051384]", "label": "response to glucocorticoid [GO:0051384]", "shape": "dot"}, {"color": "#329f5d", "id": "positive regulation of activated T cell proliferation [GO:0042104]", "label": "positive regulation of activated T cell proliferation [GO:0042104]", "shape": "dot"}]);
+                  edges = new vis.DataSet([{"color": "#999999", "from": "AFAM", "to": "protein transport within extracellular region [GO:0071693]", "value": 1}, {"color": "#999999", "from": "AFAM", "to": "vitamin transport [GO:0051180]", "value": 1}, {"color": "#999999", "from": "AFAM", "to": "protein stabilization [GO:0050821]", "value": 1}, {"color": "#999999", "from": "F13B", "to": "blood coagulation [GO:0007596]", "value": 1}, {"color": "#999999", "from": "F13B", "to": "blood coagulation, fibrin clot formation [GO:0072378]", "value": 1}, {"color": "#999999", "from": "CNDP1", "to": "regulation of protein metabolic process [GO:0051246]", "value": 1}, {"color": "#999999", "from": "CNDP1", "to": "proteolysis [GO:0006508]", "value": 1}, {"color": "#999999", "from": "ALCAM", "to": "axon extension involved in axon guidance [GO:0048846]", "value": 1}, {"color": "#999999", "from": "ALCAM", "to": "retinal ganglion cell axon guidance [GO:0031290]", "value": 1}, {"color": "#999999", "from": "ALCAM", "to": "neuron projection extension [GO:1990138]", "value": 1}, {"color": "#999999", "from": "ALCAM", "to": "cell adhesion [GO:0007155]", "value": 1}, {"color": "#999999", "from": "ALCAM", "to": "motor neuron axon guidance [GO:0008045]", "value": 1}, {"color": "#999999", "from": "ALCAM", "to": "signal transduction [GO:0007165]", "value": 1}, {"color": "#999999", "from": "ALCAM", "to": "adaptive immune response [GO:0002250]", "value": 1}, {"color": "#999999", "from": "ALCAM", "to": "heterophilic cell-cell adhesion via plasma membrane cell adhesion molecules [GO:0007157]", "value": 1}, {"color": "#999999", "from": "F13A", "to": "blood coagulation [GO:0007596]", "value": 1}, {"color": "#999999", "from": "F13A", "to": "blood coagulation, fibrin clot formation [GO:0072378]", "value": 1}, {"color": "#999999", "from": "F13A", "to": "peptide cross-linking [GO:0018149]", "value": 1}, {"color": "#999999", "from": "IBP2", "to": "response to mechanical stimulus [GO:0009612]", "value": 1}, {"color": "#999999", "from": "IBP2", "to": "female pregnancy [GO:0007565]", "value": 1}, {"color": "#999999", "from": "IBP2", "to": "cellular response to hormone stimulus [GO:0032870]", "value": 1}, {"color": "#999999", "from": "IBP2", "to": "response to estrogen [GO:0043627]", "value": 1}, {"color": "#999999", "from": "IBP2", "to": "response to nutrient [GO:0007584]", "value": 1}, {"color": "#999999", "from": "IBP2", "to": "negative regulation of canonical Wnt signaling pathway [GO:0090090]", "value": 1}, {"color": "#999999", "from": "IBP2", "to": "regulation of insulin-like growth factor receptor signaling pathway [GO:0043567]", "value": 1}, {"color": "#999999", "from": "IBP2", "to": "response to retinoic acid [GO:0032526]", "value": 1}, {"color": "#999999", "from": "IBP2", "to": "response to estradiol [GO:0032355]", "value": 1}, {"color": "#999999", "from": "IBP2", "to": "response to xenobiotic stimulus [GO:0009410]", "value": 1}, {"color": "#999999", "from": "IBP2", "to": "response to glucocorticoid [GO:0051384]", "value": 1}, {"color": "#999999", "from": "IBP2", "to": "positive regulation of activated T cell proliferation [GO:0042104]", "value": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

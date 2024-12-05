@@ -1,0 +1,453 @@
+{
+    "nodes": [
+        {
+            "color": "#6d77f0",
+            "id": "AFM",
+            "label": "AFM",
+            "shape": "dot"
+        },
+        {
+            "color": "#6d77f0",
+            "id": "CNDP1",
+            "label": "CNDP1",
+            "shape": "dot"
+        },
+        {
+            "color": "#6d77f0",
+            "id": "F13A1",
+            "label": "F13A1",
+            "shape": "dot"
+        },
+        {
+            "color": "#6d77f0",
+            "id": "IGFBP2",
+            "label": "IGFBP2",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "dementia",
+            "label": "dementia",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "Lewy body dementia",
+            "label": "Lewy body dementia",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "schizophrenia",
+            "label": "schizophrenia",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "bipolar disorder",
+            "label": "bipolar disorder",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "vascular dementia",
+            "label": "vascular dementia",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "mood disorder",
+            "label": "mood disorder",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "psychotic disorder",
+            "label": "psychotic disorder",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "transient global amnesia",
+            "label": "transient global amnesia",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "phobic disorder",
+            "label": "phobic disorder",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "post-traumatic stress disorder",
+            "label": "post-traumatic stress disorder",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "separation anxiety disorder",
+            "label": "separation anxiety disorder",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "atypical depressive disorder",
+            "label": "atypical depressive disorder",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "schizoaffective disorder",
+            "label": "schizoaffective disorder",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "melancholia",
+            "label": "melancholia",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "generalized anxiety disorder",
+            "label": "generalized anxiety disorder",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "mental depression",
+            "label": "mental depression",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "bipolar I disorder",
+            "label": "bipolar I disorder",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "schizophreniform disorder",
+            "label": "schizophreniform disorder",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "major depressive disorder",
+            "label": "major depressive disorder",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "delusional disorder",
+            "label": "delusional disorder",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "obsessive-compulsive disorder",
+            "label": "obsessive-compulsive disorder",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "agoraphobia",
+            "label": "agoraphobia",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "panic disorder",
+            "label": "panic disorder",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "anxiety disorder",
+            "label": "anxiety disorder",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "cyclothymic disorder",
+            "label": "cyclothymic disorder",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "neurotic disorder",
+            "label": "neurotic disorder",
+            "shape": "dot"
+        },
+        {
+            "color": "#abb1f6",
+            "id": "dysthymic disorder",
+            "label": "dysthymic disorder",
+            "shape": "dot"
+        },
+        {
+            "color": "#6d77f0",
+            "x": 50,
+            "y": 100,
+            "id": "ALCAM",
+            "label": "ALCAM",
+            "shape": "dot"
+        },
+        {
+            "color": "#6d77f0",
+            "x": 100,
+            "y": 100,
+            "id": "F13B",
+            "label": "F13B",
+            "shape": "dot"
+        }
+    ],
+    "edges": [
+        {
+            "value": 1.186,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 1.186",
+            "from": "AFM",
+            "to": "dementia"
+        },
+        {
+            "value": 0.01,
+            "color": "#FC7634",
+            "title": "Evidence type: befree, score: 0.01",
+            "from": "AFM",
+            "to": "Lewy body dementia"
+        },
+        {
+            "value": 0.01,
+            "color": "#FC7634",
+            "title": "Evidence type: befree, score: 0.01",
+            "from": "AFM",
+            "to": "schizophrenia"
+        },
+        {
+            "value": 0.541,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 0.541",
+            "from": "CNDP1",
+            "to": "bipolar disorder"
+        },
+        {
+            "value": 1.287,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 1.287",
+            "from": "CNDP1",
+            "to": "dementia"
+        },
+        {
+            "value": 0.889,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 0.889",
+            "from": "CNDP1",
+            "to": "vascular dementia"
+        },
+        {
+            "value": 0.55,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 0.55",
+            "from": "CNDP1",
+            "to": "mood disorder"
+        },
+        {
+            "value": 0.787,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 0.787",
+            "from": "F13A1",
+            "to": "schizophrenia"
+        },
+        {
+            "value": 0.783,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 0.783",
+            "from": "F13A1",
+            "to": "psychotic disorder"
+        },
+        {
+            "value": 0.66,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 0.66",
+            "from": "F13A1",
+            "to": "transient global amnesia"
+        },
+        {
+            "value": 1.008,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 1.008",
+            "from": "IGFBP2",
+            "to": "phobic disorder"
+        },
+        {
+            "value": 0.767,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 0.767",
+            "from": "IGFBP2",
+            "to": "post-traumatic stress disorder"
+        },
+        {
+            "value": 0.856,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 0.856",
+            "from": "IGFBP2",
+            "to": "separation anxiety disorder"
+        },
+        {
+            "value": 0.941,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 0.941",
+            "from": "IGFBP2",
+            "to": "atypical depressive disorder"
+        },
+        {
+            "value": 1.94,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 1.94",
+            "from": "IGFBP2",
+            "to": "psychotic disorder"
+        },
+        {
+            "value": 1.417,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 1.417",
+            "from": "IGFBP2",
+            "to": "schizoaffective disorder"
+        },
+        {
+            "value": 0.663,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 0.663",
+            "from": "IGFBP2",
+            "to": "melancholia"
+        },
+        {
+            "value": 0.537,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 0.537",
+            "from": "IGFBP2",
+            "to": "generalized anxiety disorder"
+        },
+        {
+            "value": 1.71,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 1.71",
+            "from": "IGFBP2",
+            "to": "mood disorder"
+        },
+        {
+            "value": 1.322,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 1.322",
+            "from": "IGFBP2",
+            "to": "mental depression"
+        },
+        {
+            "value": 1.119,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 1.119",
+            "from": "IGFBP2",
+            "to": "bipolar I disorder"
+        },
+        {
+            "value": 0.945,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 0.945",
+            "from": "IGFBP2",
+            "to": "schizophreniform disorder"
+        },
+        {
+            "value": 1.355,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 1.355",
+            "from": "IGFBP2",
+            "to": "dementia"
+        },
+        {
+            "value": 1.301,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 1.301",
+            "from": "IGFBP2",
+            "to": "major depressive disorder"
+        },
+        {
+            "value": 1.923,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 1.923",
+            "from": "IGFBP2",
+            "to": "schizophrenia"
+        },
+        {
+            "value": 0.576,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 0.576",
+            "from": "IGFBP2",
+            "to": "delusional disorder"
+        },
+        {
+            "value": 1.533,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 1.533",
+            "from": "IGFBP2",
+            "to": "obsessive-compulsive disorder"
+        },
+        {
+            "value": 1.073,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 1.073",
+            "from": "IGFBP2",
+            "to": "agoraphobia"
+        },
+        {
+            "value": 0.581,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 0.581",
+            "from": "IGFBP2",
+            "to": "panic disorder"
+        },
+        {
+            "value": 1.537,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 1.537",
+            "from": "IGFBP2",
+            "to": "anxiety disorder"
+        },
+        {
+            "value": 0.946,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 0.946",
+            "from": "IGFBP2",
+            "to": "cyclothymic disorder"
+        },
+        {
+            "value": 0.597,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 0.597",
+            "from": "IGFBP2",
+            "to": "vascular dementia"
+        },
+        {
+            "value": 1.658,
+            "color": "#999999",
+            "title": "Evidence type: compiled, score: 1.658",
+            "from": "IGFBP2",
+            "to": "bipolar disorder"
+        },
+        {
+            "value": 0.01,
+            "color": "#FC7634",
+            "title": "Evidence type: befree, score: 0.01",
+            "from": "IGFBP2",
+            "to": "neurotic disorder"
+        },
+        {
+            "value": 0.01,
+            "color": "#FC7634",
+            "title": "Evidence type: befree, score: 0.01",
+            "from": "IGFBP2",
+            "to": "dysthymic disorder"
+        }
+    ]
+}

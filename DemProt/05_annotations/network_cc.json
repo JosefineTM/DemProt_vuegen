@@ -1,0 +1,312 @@
+{
+    "nodes": [
+        {
+            "color": "#6d77f0",
+            "id": "AFAM",
+            "label": "AFAM",
+            "shape": "dot"
+        },
+        {
+            "color": "#6d77f0",
+            "id": "F13B",
+            "label": "F13B",
+            "shape": "dot"
+        },
+        {
+            "color": "#6d77f0",
+            "id": "CNDP1",
+            "label": "CNDP1",
+            "shape": "dot"
+        },
+        {
+            "color": "#6d77f0",
+            "id": "ALCAM",
+            "label": "ALCAM",
+            "shape": "dot"
+        },
+        {
+            "color": "#6d77f0",
+            "id": "F13A",
+            "label": "F13A",
+            "shape": "dot"
+        },
+        {
+            "color": "#6d77f0",
+            "id": "IBP2",
+            "label": "IBP2",
+            "shape": "dot"
+        },
+        {
+            "color": "#863899",
+            "id": "extracellular exosome [GO:0070062]",
+            "label": "extracellular exosome [GO:0070062]",
+            "shape": "dot"
+        },
+        {
+            "color": "#863899",
+            "id": "extracellular space [GO:0005615]",
+            "label": "extracellular space [GO:0005615]",
+            "shape": "dot"
+        },
+        {
+            "color": "#863899",
+            "id": "blood microparticle [GO:0072562]",
+            "label": "blood microparticle [GO:0072562]",
+            "shape": "dot"
+        },
+        {
+            "color": "#863899",
+            "id": "extracellular region [GO:0005576]",
+            "label": "extracellular region [GO:0005576]",
+            "shape": "dot"
+        },
+        {
+            "color": "#863899",
+            "id": "cytoplasm [GO:0005737]",
+            "label": "cytoplasm [GO:0005737]",
+            "shape": "dot"
+        },
+        {
+            "color": "#863899",
+            "id": "transferase complex [GO:1990234]",
+            "label": "transferase complex [GO:1990234]",
+            "shape": "dot"
+        },
+        {
+            "color": "#863899",
+            "id": "cytosol [GO:0005829]",
+            "label": "cytosol [GO:0005829]",
+            "shape": "dot"
+        },
+        {
+            "color": "#863899",
+            "id": "external side of plasma membrane [GO:0009897]",
+            "label": "external side of plasma membrane [GO:0009897]",
+            "shape": "dot"
+        },
+        {
+            "color": "#863899",
+            "id": "focal adhesion [GO:0005925]",
+            "label": "focal adhesion [GO:0005925]",
+            "shape": "dot"
+        },
+        {
+            "color": "#863899",
+            "id": "dendrite [GO:0030425]",
+            "label": "dendrite [GO:0030425]",
+            "shape": "dot"
+        },
+        {
+            "color": "#863899",
+            "id": "plasma membrane [GO:0005886]",
+            "label": "plasma membrane [GO:0005886]",
+            "shape": "dot"
+        },
+        {
+            "color": "#863899",
+            "id": "axon [GO:0030424]",
+            "label": "axon [GO:0030424]",
+            "shape": "dot"
+        },
+        {
+            "color": "#863899",
+            "id": "immunological synapse [GO:0001772]",
+            "label": "immunological synapse [GO:0001772]",
+            "shape": "dot"
+        },
+        {
+            "color": "#863899",
+            "id": "neuronal cell body [GO:0043025]",
+            "label": "neuronal cell body [GO:0043025]",
+            "shape": "dot"
+        },
+        {
+            "color": "#863899",
+            "id": "collagen-containing extracellular matrix [GO:0062023]",
+            "label": "collagen-containing extracellular matrix [GO:0062023]",
+            "shape": "dot"
+        },
+        {
+            "color": "#863899",
+            "id": "platelet alpha granule lumen [GO:0031093]",
+            "label": "platelet alpha granule lumen [GO:0031093]",
+            "shape": "dot"
+        },
+        {
+            "color": "#863899",
+            "id": "apical plasma membrane [GO:0016324]",
+            "label": "apical plasma membrane [GO:0016324]",
+            "shape": "dot"
+        }
+    ],
+    "edges": [
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "AFAM",
+            "to": "extracellular exosome [GO:0070062]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "AFAM",
+            "to": "extracellular space [GO:0005615]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "AFAM",
+            "to": "blood microparticle [GO:0072562]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "AFAM",
+            "to": "extracellular region [GO:0005576]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "AFAM",
+            "to": "cytoplasm [GO:0005737]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "F13B",
+            "to": "transferase complex [GO:1990234]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "F13B",
+            "to": "extracellular space [GO:0005615]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "F13B",
+            "to": "extracellular region [GO:0005576]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "CNDP1",
+            "to": "cytosol [GO:0005829]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "CNDP1",
+            "to": "extracellular region [GO:0005576]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "ALCAM",
+            "to": "external side of plasma membrane [GO:0009897]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "ALCAM",
+            "to": "focal adhesion [GO:0005925]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "ALCAM",
+            "to": "extracellular exosome [GO:0070062]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "ALCAM",
+            "to": "dendrite [GO:0030425]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "ALCAM",
+            "to": "plasma membrane [GO:0005886]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "ALCAM",
+            "to": "axon [GO:0030424]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "ALCAM",
+            "to": "immunological synapse [GO:0001772]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "ALCAM",
+            "to": "neuronal cell body [GO:0043025]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "F13A",
+            "to": "collagen-containing extracellular matrix [GO:0062023]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "F13A",
+            "to": "platelet alpha granule lumen [GO:0031093]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "F13A",
+            "to": "transferase complex [GO:1990234]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "F13A",
+            "to": "extracellular space [GO:0005615]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "F13A",
+            "to": "blood microparticle [GO:0072562]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "F13A",
+            "to": "extracellular region [GO:0005576]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "IBP2",
+            "to": "extracellular region [GO:0005576]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "IBP2",
+            "to": "extracellular exosome [GO:0070062]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "IBP2",
+            "to": "extracellular space [GO:0005615]"
+        },
+        {
+            "value": 1,
+            "color": "#999999",
+            "from": "IBP2",
+            "to": "apical plasma membrane [GO:0016324]"
+        }
+    ]
+}

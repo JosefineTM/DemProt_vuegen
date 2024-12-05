@@ -1,0 +1,56 @@
+,source,target,p.id,r.score,r.evidence_type
+0,AFM,dementia,P43652,1.186,compiled
+1,AFM,Lewy body dementia,P43652,0.01,befree
+2,AFM,schizophrenia,P43652,0.01,befree
+3,CNDP1,bipolar disorder,Q96KN2,0.541,compiled
+4,CNDP1,dementia,Q96KN2,1.287,compiled
+5,CNDP1,vascular dementia,Q96KN2,0.889,compiled
+6,CNDP1,mood disorder,Q96KN2,0.55,compiled
+7,F13A1,schizophrenia,P00488,0.787,compiled
+8,F13A1,psychotic disorder,P00488,0.783,compiled
+9,F13A1,transient global amnesia,P00488,0.66,compiled
+10,IGFBP2,phobic disorder,P18065,1.008,compiled
+11,IGFBP2,post-traumatic stress disorder,P18065,0.767,compiled
+12,IGFBP2,separation anxiety disorder,P18065,0.856,compiled
+13,IGFBP2,atypical depressive disorder,P18065,0.941,compiled
+14,IGFBP2,psychotic disorder,P18065,1.94,compiled
+15,IGFBP2,schizoaffective disorder,P18065,1.417,compiled
+16,IGFBP2,melancholia,P18065,0.663,compiled
+17,IGFBP2,generalized anxiety disorder,P18065,0.537,compiled
+18,IGFBP2,mood disorder,P18065,1.71,compiled
+19,IGFBP2,mental depression,P18065,1.322,compiled
+20,IGFBP2,bipolar I disorder,P18065,1.119,compiled
+21,IGFBP2,schizophreniform disorder,P18065,0.945,compiled
+22,IGFBP2,dementia,P18065,1.355,compiled
+23,IGFBP2,major depressive disorder,P18065,1.301,compiled
+24,IGFBP2,schizophrenia,P18065,1.923,compiled
+25,IGFBP2,delusional disorder,P18065,0.576,compiled
+26,IGFBP2,obsessive-compulsive disorder,P18065,1.533,compiled
+27,IGFBP2,agoraphobia,P18065,1.073,compiled
+28,IGFBP2,panic disorder,P18065,0.581,compiled
+29,IGFBP2,anxiety disorder,P18065,1.537,compiled
+30,IGFBP2,cyclothymic disorder,P18065,0.946,compiled
+31,IGFBP2,vascular dementia,P18065,0.597,compiled
+32,IGFBP2,bipolar disorder,P18065,1.658,compiled
+33,IGFBP2,bipolar disorder,P18065,0.35,curated
+34,IGFBP2,schizoaffective disorder,P18065,0.01,befree
+35,IGFBP2,bipolar disorder,P18065,0.35,befree
+36,IGFBP2,anxiety disorder,P18065,0.01,befree
+37,IGFBP2,phobic disorder,P18065,0.02,befree
+38,IGFBP2,neurotic disorder,P18065,0.01,befree
+39,IGFBP2,generalized anxiety disorder,P18065,0.01,befree
+40,IGFBP2,melancholia,P18065,0.06,befree
+41,IGFBP2,mood disorder,P18065,0.05,befree
+42,IGFBP2,panic disorder,P18065,0.01,befree
+43,IGFBP2,psychotic disorder,P18065,0.01,befree
+44,IGFBP2,mental depression,P18065,0.06,befree
+45,IGFBP2,melancholia,P18065,0.01,befree
+46,IGFBP2,dementia,P18065,0.01,befree
+47,IGFBP2,post-traumatic stress disorder,P18065,0.01,befree
+48,IGFBP2,major depressive disorder,P18065,0.06,befree
+49,IGFBP2,dysthymic disorder,P18065,0.01,befree
+50,IGFBP2,major depressive disorder,P18065,0.01,befree
+51,IGFBP2,schizophreniform disorder,P18065,0.01,befree
+52,IGFBP2,anxiety disorder,P18065,0.02,befree
+53,IGFBP2,mental depression,P18065,0.01,befree
+54,IGFBP2,bipolar disorder,P18065,0.01,befree
