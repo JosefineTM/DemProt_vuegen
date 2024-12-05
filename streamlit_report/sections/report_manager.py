@@ -3,9 +3,9 @@ import streamlit as st
 st.set_page_config(
     layout="wide",
     page_title="DementiaProteomics",
-    page_icon="example_data/mona_logo.png",
+    page_icon="docs/images/vuegen_logo.png",
 )
-st.logo("example_data/mona_logo.png")
+st.logo("docs/images/vuegen_logo.png")
 st.markdown(
     """<h1 style='text-align: center; color: #023858;'>DementiaProteomics</h1>""",
     unsafe_allow_html=True,
